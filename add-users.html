@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/add-users.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/bc5eefc1c7.js" crossorigin="anonymous"></script>
+    <script src="./js/add-users.js" defer type="module"></script>
+    <title>Enter Name and Select Driver</title>
+</head>
+
+<body>
+
+    <main class="page-container">
+        <div class="user-form-container">
+            <h1 class="title">Enter Your Name and Select a Driver</h1>
+            <form class="user-add-form">
+                <div class="name-input-container">
+                    <input class="first-name-input" type="text" id="first-name-input" placeholder="First Name...">
+                    <input class="last-name-input" type="text" id="last-name-input" placeholder="Last Name...">
+                </div>
+                <p class="name-message message" id="name-message"></p>
+                <div class="drivers-slider">
+                    <div class="driver">
+                    </div>
+                </div>
+                <p class="driver-message message" id="driver-message"></p>
+                <input type="hidden" id="selected-driver-id" name="driver-id" required>
+                <button type="submit" id="add-user-btn" class="add-user-btn">Add</button>
+            </form>
+            <div class="user-list-container" id="user-list-wrapper"></div>
+            <div class="continue-btn-container">
+                <button type="button" id="back-btn" class="back-btn" data-url="./index.html"><i
+                        class="fa-solid fa-circle-left"></i>Back</button>
+                <button type="button" id="continue-btn" class="continue-btn-disable" disabled
+                    data-url="./leaderboard.html">Continue</button>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

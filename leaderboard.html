@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/leaderboard.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/bc5eefc1c7.js" crossorigin="anonymous"></script>
+    <script src="./js/leaderboard.js" defer type="module"></script>
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    <main class="page-container">
+        <div class="modal-container">
+            <h1 class="title">LEADERBOARD</h1>
+            <div class="leaderboard-time-container">
+                <div class="leaderboard-list-container" id="leaderboard-list-container"></div>
+
+                <form class="time-form">
+                    <div class="user-select-container">
+                        <label for="user-select">Select Driver:</label>
+                        <select id="user-select"></select>
+                    </div>
+
+                    <div class="time-container">
+                        <h4 class="enter-time-title">Enter Your Time</h4>
+                        <div class="time-inputs-container">
+                            <input type="number" id="minutes-input" placeholder="Min.." min="0" max="59">
+                            <span>:</span>
+                            <input type="number" id="seconds-input" placeholder="Sec.." min="0" max="59">
+                        </div>
+                    </div>
+                    <div class="time-button-container">
+                        <button class="time-button" type="submit">Save</button>
+                    </div>
+                    <p id="time-message" class="time-message"></p>
+                </form>
+            </div>
+            <div class="back-reset-btn-container">
+                <button type="button" id="back-btn" class="back-btn" data-url="./add-users.html"><i
+                        class="fa-solid fa-circle-left"></i>Back</button>
+                <p id="reset-message"></p>
+                <button type="button" id="reset-btn" class="reset-btn">Reset</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

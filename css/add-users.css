@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/vaimo-mountains.webp");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.user-form-container {
+  width: 90%;
+  max-width: 1200px;
+  max-height: 80%;
+  overflow-y: auto;
+  text-align: center;
+  border: #333333 2px solid;
+  border-radius: 8px;
+  box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
+    0px 10px 5px rgba(151, 149, 149, 0.1);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(37, 37, 37, 0.9);
+  padding: 25px 15px 15px 15px;
+}
+
+.user-add-form {
+  border-bottom: #fabf2b solid 1px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: rgb(219, 217, 217);
+  margin: 0 0 25px;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 2px #000;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.name-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.drivers-slider {
+  max-width: 90%;
+  margin: auto;
+  padding: 22px 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #fabf2b;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fabf2b;
+}
+.slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+}
+
+.driver-container,
+.driver-img {
+  border: 4px solid transparent;
+  box-sizing: border-box;
+}
+
+.driver-container {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.driver-img {
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.driver-img:hover {
+  transform: scale(1.1);
+}
+
+.driver-name {
+  color: rgb(219, 217, 217);
+  text-shadow: 1px 1px 2px #000;
+  margin: 15px 0 0;
+}
+
+.driver-team {
+  color: rgb(219, 217, 217);
+  text-shadow: 1px 1px 2px #000;
+  margin: 0;
+}
+
+input[type="text"] {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+  text-shadow: -0.01em -0.01em 0.01em #000;
+  background-color: #fabf2b;
+  font-size: 14px;
+  transition: all ease-in-out 0.15s;
+  cursor: text;
+  border: 2px solid #333333;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+  color: #000;
+  font-size: 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #333333;
+  color: #fabf2b !important;
+  border-color: #fabf2b;
+}
+
+button {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  text-shadow: -0.01em -0.01em 0.01em #000;
+  background-color: #fabf2b;
+  font-size: 14px;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+  border: 2px solid #333333;
+}
+
+button:hover {
+  background-color: #333333;
+  color: #fabf2b;
+}
+
+.add-user-btn {
+  margin: 25px 0;
+}
+
+.driver-selected {
+  border: 4px solid #fabf2b;
+}
+
+.driver-taken {
+  opacity: 0.5;
+  border: rgb(250, 191, 43) 4px solid;
+  transition: none;
+  cursor: none;
+  pointer-events: none;
+}
+
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.users-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 800px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: #fabf2b 1px solid;
+  margin: 15px;
+  color: rgb(219, 217, 217);
+  font-style: italic;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.first-name {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.last-name {
+  padding-right: 10px;
+}
+
+.user-img {
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.delete-user-btn {
+  color: #fabf2b;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.delete-user-btn:hover {
+  transform: scale(1.15);
+}
+
+.message {
+  color: rgb(219, 217, 217);
+}
+
+.continue-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0 0 15px;
+}
+
+.fa-circle-left {
+  padding-right: 5px;
+}
+
+.continue-btn-disable {
+  opacity: 0.5;
+  transition: none;
+  cursor: none;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fabf2b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(219, 217, 217);
+}
+
+@media (min-width: 430px) {
+  .user-form-container {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .users-list {
+    max-height: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+
+  .name-input-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  input[type="text"] {
+    width: 220px;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 14px;
+  }
+
+  .user-form-container {
+    width: 80%;
+  }
+
+  .add-user-btn {
+    width: 120px;
+  }
+
+  .users-list {
+    max-height: 180px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 28px;
+  }
+}
